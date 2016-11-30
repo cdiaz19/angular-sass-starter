@@ -1,0 +1,3 @@
+echo '>>> Running lite-server (watching sass)'
+lite-server &
+  npm run watch-css

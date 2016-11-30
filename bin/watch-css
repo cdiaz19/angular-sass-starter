@@ -1,0 +1,2 @@
+node-sass -w app/app.scss css/style.css
+

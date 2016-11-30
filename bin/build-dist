@@ -1,0 +1,19 @@
+echo ">>> Removing existing build"
+rm -r www
+rm app/app.config.js
+
+echo ">>> Compiling Sass"
+npm run build-css
+
+echo ">>> Copying necessary files to www/"
+mkdir www
+find app -name '*.js' -exec cp --parents {} www \; # copy all app .js files
+find app -name '*.html' -exec cp --parents {} www \; # copy all app .html files
+node bin/copy-scripts # copy scripts used in index from node_modules/ to www/...
+cp -r audio www
+cp -r css www
+cp -r fonts www
+cp -r img www
+cp -r lib www
+cp index.html www
+

@@ -1,0 +1,11 @@
+echo '>>> Building dist'
+npm run build-dist
+
+echo '>>> Creating config with env variables'
+if node bin/create-config; then
+  echo '>>> Running web.js'
+  node web.js
+else
+  echo 'MISSING ENV VARIABLES'
+fi
+

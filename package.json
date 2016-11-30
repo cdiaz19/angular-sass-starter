@@ -1,0 +1,23 @@
+{
+  "name": "main-web",
+  "version": "1.1.1",
+  "description": "Main web-app",
+  "scripts": {
+    "dev": "./bin/dev",
+    "start": "./bin/start",
+    "build-css": "./bin/build-css",
+    "watch-css": "./bin/watch-css",
+    "build-dist": "./bin/build-dist"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-bootstrap": "^2.2.0",
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "fs-extra": "^1.0.0",
+    "node-sass": "^3.11.3"
+  },
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  }
+}
